@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoShare</title>
+    <link rel="stylesheet" href="css/login_telPsd.css">
+</head>
+
+<body onload="fetchNum()">
+    <div class="navbar">
+        <span id="nav-right"><img src="images/back.png" height="30px" alt="backButton"></span>
+        <nav>Log In</nav>
+    </div>
+    <div class="logo">
+        <img src="images/logo.95e0c48a.png" alt="logoImage" height="70%">
+    </div>
+    <div class="container">
+        <!-- heading part -->
+        <div class="innerBox">
+            <div class="heading">
+                <h2>Welcome to 'Go Share'!</h2>
+            </div>
+            <!-- Div Number Show -->
+            <div class="numberShow">
+                <div class="lBar"><img src="images/user.png" alt="userImage" height="40px"> <span id="userNum">+91</span></div><div class="rBar"><img src="images/edit.png" height="30px" onclick="redirectPage()" style="margin-right: 10px; cursor: pointer;" alt=""></div>
+            </div>
+
+
+            <!-- form part -->
+
+            <div class="log-num">
+                <input type="password" id="myInput" placeholder="Enter password">
+            </div>
+            <div class="reset">
+                <div class="show-pass">
+                    <input type="checkbox" onclick="showPassword()" name="" id="">Show Password
+                </div>
+                <div class="forget">
+                    Forget Password？
+                </div>
+            </div>
+            <div class="downBar">
+                <button id="logIn">Log In</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("logIn").addEventListener('click',()=>{
+            let phoneNum = localStorage.getItem("phoneNum");
+            let password = document.getElementById("myInput").value;
+            localStorage.setItem(phoneNum,password);
+            window.location = '/server.html';
+        });
+        function fetchNum() {
+            let userNum = document.getElementById("userNum");
+            userNum.innerHTML+=localStorage.getItem("phoneNum"); //it's working
+        }
+        function showPassword() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+     const redirectPage =()=>{
+        window.location = '/index.html';
+     }
+    </script>
+</body>
+
+</html>

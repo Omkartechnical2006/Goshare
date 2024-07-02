@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoShare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <span id="nav-right"><img src="images/back.png" height="30px" alt="backButton"></span><nav>Log In</nav>
+    </div>
+    <div class="logo">
+        <img src="images/logo.95e0c48a.png" alt="logoImage" height="70%">
+    </div>
+    <div class="container">
+        <!-- heading part -->
+        <div class="innerBox">
+        <div class="heading">
+            <h2>Welcome to 'Go Share'!</h2>
+        </div>
+
+         <!-- form part -->
+
+    <div class="log-num">+91
+        <input type="number" id="userNum" placeholder="Enter phone number">
+        </div>
+        <div class="forget">
+            Forget Password？
+        </div>
+
+        <div class="downBar">
+            <p>Create a New Account</p><button id="next">Next</button>
+        </div>
+    </div>
+    </div>
+    <script>
+        document.getElementById("next").addEventListener('click',()=>{
+            let phoneNum = document.getElementById("userNum").value;
+            localStorage.setItem("phoneNum",phoneNum);
+            window.location = '/login_telPsd.html';
+        });
+    </script>
+</body>
+</html>

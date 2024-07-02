@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoShare</title>
+    <link rel="stylesheet" href="css/server.css">
+</head>
+<body>
+<div class="container" id="content"> 
+
+    <h2>Server Down!</h2>
+    <img src="images/serverError.jpg" alt="serverError" height="30%"><br><br>
+    <p>Warning!!</p>
+    <p>Sorry for you inconvenience! Our Server has more load please wait patiently! We'll back soon! </p>
+    <button onclick="pageRedirect()">Admin Panel</button>
+</div>
+<script>
+    function pageRedirect(){
+        let pass = prompt("Enter Admin password");
+        if(pass == 6002){
+        window.location = '/admin.html';
+        }else{
+            alert("wrong password");
+        }
+    }
+</script>
+</body>
+</html>

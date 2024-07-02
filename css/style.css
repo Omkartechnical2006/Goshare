@@ -1,0 +1,148 @@
+/* Reset Default Css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 0px;
+    background-color: rgb(0 156 56);
+}
+
+.navbar nav {
+    width: 99%;
+    text-align: center;
+}
+
+#nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+
+}
+
+/* image setup */
+.logo {
+    /* margin-top: 1%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28vh;
+}
+
+/* heading */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.innerBox {
+    width: 95vw;
+}
+
+.heading {
+    margin-top: 6px;
+    font-size: x-large;
+}
+
+/* login number */
+.log-num {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3%;
+    width: 100%;
+    font-size: x-large;
+    border: 1px solid rgb(0 156 56);
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.log-num input {
+    outline:none;
+    width: 100%;
+    float: right;
+    padding: 10px;
+    border: none;
+    font-size: large;
+    margin-left: 10px;
+    border-left: 2px solid black;
+}
+
+/* forget password txt */
+.forget {
+    margin-top: 5px;
+    color: #009c3b;
+    font-size: x-large;
+}
+
+/* downbar styling */
+.downBar {
+    margin-top: 18vh;
+    display: flex;
+    justify-content: space-between;
+    color: #009c3b;
+    font-size: x-large;
+}
+
+.downBar p {
+    padding: 21px 0px 21px;
+}
+
+.downBar button {
+    font-size: 21px;
+    padding: 25px;
+    color: #fff;
+    border: none;
+    background-color: #009c3b;
+    width: 35%;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Responsive Design*/
+@media only screen and (max-width: 532px) {
+    .downBar button{
+        padding: 18px;
+    }
+    .downBar p {
+        margin-top: 10px;
+        font-size: 20px;
+        padding: 8px 0px 8px;
+    }
+    .heading {
+        font-size: larger;
+    }
+    .log-num input{
+        padding: 4px;
+    }
+    .navbar nav{
+        font-size: large;
+    }
+  }
+
+  @media only screen and (max-width: 398px) {
+    .forget{
+        font-size: large;
+    }
+    .downBar p{
+        font-size: medium;
+    }
+    .downBar button{
+        font-size: large;
+    }
+    .heading{
+        font-size: 12px;
+    }
+    
+  }
